@@ -1,25 +1,9 @@
-$primary-color: #444;
-$secondary-color: #b0d42e;
-$show-home-image: true;
-$home-image: url(/dist/img/background.jpg);
-$background-opacity: 0.9;
-
-@mixin ease-out {
-    transition: all 0.7s ease-out;
-}
-
-@mixin background {
-    @if $show-home-image {
-        &#bg-img {
-            background: $home-image;
-        }
-    }
-}
+@import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
 }
-
 
 body {
     @include background;
@@ -31,9 +15,6 @@ body {
     line-height: 1.5;
 }   
 
-h1 {
-    cursor: pointer;
-}
 
 h1, h2, h3 {
     margin: 0;
@@ -41,11 +22,6 @@ h1, h2, h3 {
 
     &.lg-heading {
         font-size: 6rem;
-
-        &.lg-heading:hover .text-secondary {
-            color: #fff;
-            @include ease-out();
-        }
     }
     &.sm-heading{
         margin-bottom: 2rem;
@@ -67,10 +43,6 @@ header {
 
 .text-secondary {
     color: $secondary-color;
-
-    &.text-secondary:hover {
-        color: #fff;
-    }
 }
 
 main {
@@ -98,3 +70,6 @@ main {
        }
     }
 }
+
+
+    
