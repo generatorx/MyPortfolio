@@ -1,7 +1,7 @@
 $primary-color: #444;
-$secondary-color: #b0d42e;
+$secondary-color: #e2932c;
 $show-home-image: true;
-$home-image: url(/dist/img/background.jpg);
+$home-image: url(../img/background.jpg);
 $background-opacity: 0.8;
 
 @mixin ease-out {
@@ -26,6 +26,15 @@ $background-opacity: 0.8;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+//Set text Color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000; 
+    } @else {
+        @return #fff;
     }
 }
 

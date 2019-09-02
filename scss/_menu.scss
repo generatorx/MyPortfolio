@@ -11,7 +11,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include ease-out;
     }
 
@@ -57,7 +57,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: rgba(darken($primary-color, 5), 0.9);
+        background: rgba(darken($primary-color, 5), 0.98);
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include ease-out();
@@ -69,7 +69,7 @@
     }
 
     &-branding {
-        background: rgba($primary-color, 0.9);
+        background: rgba($primary-color, 0.98);
         @include ease-out();
         transform: translate3d(0, 100%, 0);
 
@@ -78,11 +78,12 @@
         }
 
         .portrait {
-            width: 250px;
-            height: 250px;
-            background: url(/dist/img/portrait.jpg);
+            width: 15rem;
+            height: 15rem;
+            background: url(../img/portrait.jpg);
             border-radius: 50%;
             border: solid 3px $secondary-color;
+            background-position: center;
             
         }
     }
@@ -103,11 +104,11 @@
     .nav-link {
         display: inline-block;
         position: relative;
-        font-size: 30px;
+        font-size: 2.3rem;
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 400;
-        color: #fff;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include ease-out();
 
